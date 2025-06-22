@@ -1,12 +1,15 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import { Image } from 'astro:assets';
+import foerderkreisBild from '../assets/images/FoeKreis_AG.jpeg';
 ---
 
 <Layout
 	title="HALLO. WIR SIND DER FÖRDERKREIS"
 	description="Bitte jetzt meinen Text...."
 	pubDate={new Date('Uns gibt es seit 1999')}
-	heroImage='/FoeKreis_AG.jpeg'
+	heroImage={foerderkreisBild.src}
+	>
 	<p>
 		Der Förderkreis der Oranienschule hat derzeit über 300 engagierte Mitglieder, vor allem aus der Elternschaft, aber auch Lehrer und Ehemalige unterstützen uns mit ihren Beiträgen und Spenden.
 	</p>
