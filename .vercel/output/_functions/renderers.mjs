@@ -46,6 +46,6 @@ const renderer = {
 };
 var server_default = renderer;
 
-const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"file:///Users/martinseibert/Documents/code/oranienschule-website/node_modules/.pnpm/@astrojs+mdx@4.3.0_astro@5.9.3_@types+node@24.0.3_rollup@4.43.0_typescript@5.8.3_/node_modules/@astrojs/mdx/dist/server.js"}, { ssr: server_default }),];
+const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"file:///Users/Carl-Axel/Documents/code/oranienschule/node_modules/.pnpm/@astrojs+mdx@4.3.0_astro@5.9.3_@types+node@24.0.3_rollup@4.43.0_typescript@5.8.3_/node_modules/@astrojs/mdx/dist/server.js"}, { ssr: server_default }),];
 
 export { renderers };
