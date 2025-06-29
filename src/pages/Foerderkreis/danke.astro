@@ -1,0 +1,425 @@
+---
+import Layout from '../../layouts/BlogPost.astro';
+import HeaderLink from '../../components/HeaderLink.astro';
+---
+
+<Layout
+	title="VIELEN DANK FÜR IHRE UNTERSTÜTZUNG!"
+	description="Wir danken allen Mitgliedern und Spendern des Förderkreises der Oranienschule für ihre wertvolle Unterstützung."
+	pubDate={new Date()}
+	heroImage='/FoeKreis_AG.jpeg'
+>
+	<!-- Sticky Navigation Bar -->
+	<nav class="sticky-nav">
+		<div class="nav-container">
+			<HeaderLink href="/Foerderkreis">Main</HeaderLink>
+			<HeaderLink href="/Foerderkreis/projekte">Projekte</HeaderLink>
+			<HeaderLink href="/spendeninformation">Spendeninformationen</HeaderLink>
+			<HeaderLink href="/Foerderkreis/danke">Danke</HeaderLink>
+		</div>
+	</nav>
+
+	<div class="thank-you-content">
+		<div class="thank-you-header">
+			<h1>Vielen Dank für Ihre Unterstützung!</h1>
+			<p class="subtitle">
+				Ihr Engagement macht den Unterschied für unsere Schüler:innen
+			</p>
+		</div>
+
+		<div class="thank-you-message">
+			<p>
+				Liebe Mitglieder und Unterstützer des Förderkreises der Oranienschule,
+			</p>
+			
+			<p>
+				mit großer Dankbarkeit möchten wir uns bei Ihnen für Ihre wertvolle Unterstützung bedanken. 
+				Ihre Beiträge und Spenden ermöglichen es uns, wichtige Projekte zu realisieren und die 
+				Bildungsqualität an der Oranienschule kontinuierlich zu verbessern.
+			</p>
+
+			<p>
+				Jede Spende, jeder Mitgliedsbeitrag und jede ehrenamtliche Stunde trägt dazu bei, 
+				dass unsere Schüler:innen die bestmöglichen Lernbedingungen erhalten. 
+				Von der digitalen Ausstattung bis hin zu kreativen Projekten – Ihre Unterstützung 
+				macht all dies möglich.
+			</p>
+		</div>
+
+		<!-- Impact Section -->
+		<section class="impact-section">
+			<h2>Ihre Unterstützung bewirkt Großes</h2>
+			<div class="impact-grid">
+				<div class="impact-card">
+					<div class="impact-icon">📚</div>
+					<h3>Bessere Lernbedingungen</h3>
+					<p>Dank Ihrer Spenden können wir moderne Lernmittel und Ausstattung bereitstellen.</p>
+				</div>
+				<div class="impact-card">
+					<div class="impact-icon">🎨</div>
+					<h3>Kreative Projekte</h3>
+					<p>Musik-, Theater- und Kunstprojekte fördern die Talente unserer Schüler:innen.</p>
+				</div>
+				<div class="impact-card">
+					<div class="impact-icon">🌱</div>
+					<h3>Nachhaltige Bildung</h3>
+					<p>Umweltprojekte und Schulgarten vermitteln wichtige Werte für die Zukunft.</p>
+				</div>
+				<div class="impact-card">
+					<div class="impact-icon">💻</div>
+					<h3>Digitale Kompetenz</h3>
+					<p>Moderne Technologie bereitet die Schüler:innen auf die digitale Welt vor.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Transparency Section -->
+		<section class="transparency-section">
+			<h2>Transparenz und Verantwortung</h2>
+			<p>
+				Wir legen großen Wert auf Transparenz in der Verwendung Ihrer Spenden. 
+				Alle Mittel werden sorgfältig geplant und ausschließlich für Projekte verwendet, 
+				die direkt den Schüler:innen der Oranienschule zugutekommen.
+			</p>
+			
+			<div class="transparency-stats">
+				<div class="stat-item">
+					<span class="stat-number">100%</span>
+					<span class="stat-label">der Spenden gehen an die Schule</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">300+</span>
+					<span class="stat-label">aktive Mitglieder</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">25+</span>
+					<span class="stat-label">Jahre Erfahrung</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Stay Connected -->
+		<section class="stay-connected">
+			<h2>Bleiben Sie mit uns verbunden</h2>
+			<p>
+				Möchten Sie über unsere aktuellen Projekte und Erfolge informiert bleiben? 
+				Kontaktieren Sie uns gerne oder werden Sie Mitglied im Förderkreis!
+			</p>
+			
+			<div class="contact-options">
+				<a href="/spendeninformation" class="contact-button primary">
+					Weitere Informationen
+				</a>
+				<a href="/Foerderkreis" class="contact-button secondary">
+					Zurück zur Übersicht
+				</a>
+			</div>
+		</section>
+
+		<!-- Final Thank You -->
+		<div class="final-thanks">
+			<p>
+				<strong>Nochmals herzlichen Dank für Ihr Vertrauen und Ihre Unterstützung!</strong>
+			</p>
+			<p>
+				Ihr Förderkreis der Oranienschule
+			</p>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	/* Sticky Navigation Styles */
+	.sticky-nav {
+		position: sticky;
+		top: 0;
+		background: white;
+		border-bottom: 1px solid #e5e7eb;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		z-index: 1000;
+		padding: 0.75rem 0;
+	}
+
+	.nav-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	.nav-container a {
+		padding: 0.5rem 1rem;
+		color: #374151;
+		text-decoration: none;
+		font-weight: 500;
+		border-radius: 6px;
+		transition: all 0.2s ease;
+	}
+
+	.nav-container a:hover {
+		background: #f3f4f6;
+		color: #1f2937;
+	}
+
+	.nav-container a.active {
+		background: #3b82f6;
+		color: white;
+	}
+
+	@media (max-width: 768px) {
+		.nav-container {
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.nav-container a {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	/* Thank You Content Styles */
+	.thank-you-content {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+
+	.thank-you-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.thank-you-header h1 {
+		font-size: 2.5rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 1rem;
+	}
+
+	.subtitle {
+		font-size: 1.2rem;
+		color: #6b7280;
+		font-style: italic;
+	}
+
+	.thank-you-message {
+		background: #f8fafc;
+		padding: 2rem;
+		border-radius: 12px;
+		margin-bottom: 3rem;
+		border-left: 4px solid #3b82f6;
+	}
+
+	.thank-you-message p {
+		margin-bottom: 1rem;
+		line-height: 1.7;
+		color: #374151;
+	}
+
+	.thank-you-message p:last-child {
+		margin-bottom: 0;
+	}
+
+	/* Impact Section */
+	.impact-section {
+		margin-bottom: 3rem;
+	}
+
+	.impact-section h2 {
+		font-size: 2rem;
+		font-weight: bold;
+		color: #1f2937;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.impact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.impact-card {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 12px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		transition: transform 0.2s ease;
+	}
+
+	.impact-card:hover {
+		transform: translateY(-2px);
+	}
+
+	.impact-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.impact-card h3 {
+		font-size: 1.25rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 0.75rem;
+	}
+
+	.impact-card p {
+		color: #6b7280;
+		line-height: 1.6;
+	}
+
+	/* Transparency Section */
+	.transparency-section {
+		background: #f8fafc;
+		padding: 2rem;
+		border-radius: 12px;
+		margin-bottom: 3rem;
+	}
+
+	.transparency-section h2 {
+		font-size: 2rem;
+		font-weight: bold;
+		color: #1f2937;
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.transparency-section p {
+		text-align: center;
+		color: #6b7280;
+		line-height: 1.7;
+		margin-bottom: 2rem;
+	}
+
+	.transparency-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		text-align: center;
+	}
+
+	.stat-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.stat-number {
+		font-size: 2.5rem;
+		font-weight: bold;
+		color: #3b82f6;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		color: #6b7280;
+		font-size: 0.9rem;
+	}
+
+	/* Stay Connected Section */
+	.stay-connected {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.stay-connected h2 {
+		font-size: 2rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 1rem;
+	}
+
+	.stay-connected p {
+		color: #6b7280;
+		line-height: 1.7;
+		margin-bottom: 2rem;
+	}
+
+	.contact-options {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.contact-button {
+		display: inline-block;
+		padding: 0.75rem 2rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.2s ease;
+	}
+
+	.contact-button.primary {
+		background: #3b82f6;
+		color: white;
+	}
+
+	.contact-button.primary:hover {
+		background: #2563eb;
+	}
+
+	.contact-button.secondary {
+		background: white;
+		color: #3b82f6;
+		border: 2px solid #3b82f6;
+	}
+
+	.contact-button.secondary:hover {
+		background: #3b82f6;
+		color: white;
+	}
+
+	/* Final Thanks */
+	.final-thanks {
+		text-align: center;
+		background: #f0f9ff;
+		padding: 2rem;
+		border-radius: 12px;
+		border: 2px solid #3b82f6;
+	}
+
+	.final-thanks p {
+		margin-bottom: 0.5rem;
+		color: #1f2937;
+		line-height: 1.6;
+	}
+
+	.final-thanks p:last-child {
+		margin-bottom: 0;
+		font-style: italic;
+		color: #6b7280;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.thank-you-header h1 {
+			font-size: 2rem;
+		}
+		
+		.impact-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.transparency-stats {
+			grid-template-columns: 1fr;
+		}
+		
+		.contact-options {
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.contact-button {
+			width: 100%;
+			max-width: 300px;
+			text-align: center;
+		}
+	}
+</style> 

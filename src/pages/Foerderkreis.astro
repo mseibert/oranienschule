@@ -1,0 +1,317 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+import HeaderLink from '../components/HeaderLink.astro';
+---
+
+
+
+
+<Layout
+
+    title="HALLO. WIR SIND DER FÖRDERKREIS"
+	description="Bitte jetzt meinen Text...."
+	pubDate={new Date('Uns gibt es seit 1999')}
+	heroImage='/FoeKreis_AG.jpeg'
+>
+
+<!-- Sticky Navigation Bar -->
+
+<nav class="sticky-nav">
+	<div class="nav-container">
+		<HeaderLink href="/Foerderkreis">Main</HeaderLink>
+		<HeaderLink href="/Foerderkreis/projekte">Projekte</HeaderLink>
+		<HeaderLink href="/spendeninformation">Spendeninformationen</HeaderLink>
+		<HeaderLink href="/Foerderkreis/danke">Danke</HeaderLink>
+	</div>
+</nav>
+
+
+	<p>
+		Der Förderkreis der Oranienschule hat derzeit über 300 engagierte Mitglieder, vor allem aus der Elternschaft, aber auch Lehrer und Ehemalige unterstützen uns mit ihren Beiträgen und Spenden.
+	</p>
+
+	<p>
+		Je mehr Mittel durch Beiträge und Spenden zur Verfügung stehen, desto effektiver und flexibler kann die Oranienschule in ihrer Arbeit unterstützt werden.
+	</p>
+
+	<p>
+		Werde ein Teil unserer engagierten Gemeinschaft und hilf mit, die Zukunft der Schüler:innen zu gestalten! 
+	</p>
+
+	<p>
+		Wir freuen uns über jede Unterstützung!
+	</p>
+
+	<!-- Projektübersicht -->
+	<section class="projects-section">
+		<h2>Unsere Projekte</h2>
+		<p class="projects-intro">
+			Hier finden Sie eine Auswahl unserer aktuellen und abgeschlossenen Projekte, die wir dank Ihrer Unterstützung realisieren konnten.
+		</p>
+		
+		<div class="projects-grid">
+			<!-- Projekt 1 -->
+			<article class="project-card">
+				<div class="project-image">
+					<img src="/blog-placeholder-1.jpg" alt="Digitale Lernplattform" loading="lazy">
+				</div>
+				<div class="project-content">
+					<span class="project-category">Digitalisierung</span>
+					<h3>Digitale Lernplattform</h3>
+					<p>
+						Wir haben eine moderne digitale Lernplattform für die Oranienschule finanziert, 
+						die es Schüler:innen ermöglicht, auch außerhalb des Klassenzimmers effektiv zu lernen. 
+						Das Projekt umfasst Tablets, interaktive Whiteboards und Lernsoftware.
+					</p>
+					<div class="project-stats">
+						<span>Status: Abgeschlossen</span>
+						<span>Förderung: €25.000</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Projekt 2 -->
+			<article class="project-card">
+				<div class="project-image">
+					<img src="/blog-placeholder-2.jpg" alt="Schulgarten und Umweltbildung" loading="lazy">
+				</div>
+				<div class="project-content">
+					<span class="project-category">Nachhaltigkeit</span>
+					<h3>Schulgarten und Umweltbildung</h3>
+					<p>
+						Unser Schulgarten-Projekt fördert das Umweltbewusstsein der Schüler:innen. 
+						Hier lernen sie praktisch über Nachhaltigkeit, Biologie und verantwortungsvollen 
+						Umgang mit natürlichen Ressourcen.
+					</p>
+					<div class="project-stats">
+						<span>Status: Laufend</span>
+						<span>Förderung: €15.000</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Projekt 3 -->
+			<article class="project-card">
+				<div class="project-image">
+					<img src="/blog-placeholder-3.jpg" alt="Musik- und Theaterprojekte" loading="lazy">
+				</div>
+				<div class="project-content">
+					<span class="project-category">Kreativität</span>
+					<h3>Musik- und Theaterprojekte</h3>
+					<p>
+						Wir unterstützen regelmäßig Musik- und Theaterprojekte, die die kreativen 
+						Talente der Schüler:innen fördern. Dazu gehören Instrumente, Kostüme, 
+						Bühnenausstattung und Workshops mit professionellen Künstlern.
+					</p>
+					<div class="project-stats">
+						<span>Status: Laufend</span>
+						<span>Förderung: €12.000</span>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<div class="projects-cta">
+			<p>
+				<strong>Möchten Sie eines unserer Projekte unterstützen?</strong><br>
+				Kontaktieren Sie uns gerne für weitere Informationen oder werden Sie Mitglied im Förderkreis!
+			</p>
+			<a href="/spendeninformation" class="cta-button">Jetzt unterstützen</a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	/* Sticky Navigation Styles */
+	.sticky-nav {
+		position: sticky;
+		top: 0;
+		background: white;
+		border-bottom: 1px solid #e5e7eb;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		z-index: 1000;
+		padding: 0.75rem 0;
+	}
+
+	.nav-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	.nav-container a {
+		padding: 0.5rem 1rem;
+		color: #374151;
+		text-decoration: none;
+		font-weight: 500;
+		border-radius: 6px;
+		transition: all 0.2s ease;
+	}
+
+	.nav-container a:hover {
+		background: #f3f4f6;
+		color: #1f2937;
+	}
+
+	.nav-container a.active {
+		background: #3b82f6;
+		color: white;
+	}
+
+	@media (max-width: 768px) {
+		.nav-container {
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.nav-container a {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	.projects-section {
+		margin-top: 3rem;
+		padding: 2rem 0;
+		border-top: 1px solid #e5e7eb;
+	}
+
+	.projects-section h2 {
+		font-size: 2.5rem;
+		font-weight: bold;
+		margin-bottom: 1rem;
+		color: #1f2937;
+		text-align: center;
+	}
+
+	.projects-intro {
+		text-align: center;
+		font-size: 1.1rem;
+		color: #6b7280;
+		margin-bottom: 3rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.project-card {
+		background: white;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	}
+
+	.project-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	}
+
+	.project-image {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.project-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.project-card:hover .project-image img {
+		transform: scale(1.05);
+	}
+
+	.project-content {
+		padding: 1.5rem;
+	}
+
+	.project-category {
+		display: inline-block;
+		background: #3b82f6;
+		color: white;
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.875rem;
+		font-weight: 500;
+		margin-bottom: 0.75rem;
+	}
+
+	.project-content h3 {
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin-bottom: 0.75rem;
+		color: #1f2937;
+	}
+
+	.project-content p {
+		color: #6b7280;
+		line-height: 1.6;
+		margin-bottom: 1rem;
+	}
+
+	.project-stats {
+		display: flex;
+		justify-content: space-between;
+		font-size: 0.875rem;
+		color: #9ca3af;
+		border-top: 1px solid #f3f4f6;
+		padding-top: 0.75rem;
+	}
+
+	.projects-cta {
+		text-align: center;
+		background: #f8fafc;
+		padding: 2rem;
+		border-radius: 12px;
+		margin-top: 2rem;
+	}
+
+	.projects-cta p {
+		margin-bottom: 1.5rem;
+		color: #374151;
+		line-height: 1.6;
+	}
+
+	.cta-button {
+		display: inline-block;
+		background: #3b82f6;
+		color: white;
+		padding: 0.75rem 2rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: background-color 0.2s ease;
+	}
+
+	.cta-button:hover {
+		background: #2563eb;
+	}
+
+	@media (max-width: 768px) {
+		.projects-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.projects-section h2 {
+			font-size: 2rem;
+		}
+		
+		.project-stats {
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+	}
+</style>
