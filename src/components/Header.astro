@@ -2,6 +2,10 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 import { Image } from 'astro:assets';
+
+// Check if we're on the Förderkreis page
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('/Foerderkreis/');
 ---
 
 <header>
@@ -12,8 +16,7 @@ import { Image } from 'astro:assets';
 			<HeaderLink href="/blog">Meldungen</HeaderLink>
 			<HeaderLink href="/">Menschen</HeaderLink>
 			<HeaderLink href="/">Lernen</HeaderLink>
-			<HeaderLink href="/about">Förderkreis</HeaderLink>
-			<HeaderLink href="/spendeninformation">Spendeninformation</HeaderLink>
+			<HeaderLink href="/Foerderkreis">Förderkreis</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://www.instagram.com/oranienschule_wiesbaden/" target="_blank">
@@ -64,6 +67,7 @@ import { Image } from 'astro:assets';
 	.social-links a {
 		display: flex;
 	}
+	
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
