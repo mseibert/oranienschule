@@ -135,9 +135,10 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 	.mobile-menu-toggle {
 		display: none !important;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: center;
+		align-items: center;
 		width: 35px;
-		height: 30px;
+		height: 35px;
 		background: transparent;
 		border: none;
 		cursor: pointer;
@@ -146,15 +147,16 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 	}
 	
 	.hamburger-line {
-		width: 100%;
+		width: 26px;
 		height: 3px;
 		background: #333;
 		border-radius: 2px;
-		transition: all 0.3s ease;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		margin: 3px 0;
 	}
 	
 	.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
-		transform: rotate(45deg) translate(5px, 5px);
+		transform: translateY(8px) rotate(45deg);
 	}
 	
 	.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
@@ -162,7 +164,7 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 	}
 	
 	.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-		transform: rotate(-45deg) translate(7px, -6px);
+		transform: translateY(-8px) rotate(-45deg);
 	}
 	
 	/* CTA Button Styling */
