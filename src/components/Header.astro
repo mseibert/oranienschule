@@ -11,25 +11,74 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 
 <header>
 	<nav>
-		<a href="/"><Image src={logo} alt="Oranienschule Wiesbaden" width="400" height="115" /></a>
-		<div class="internal-links">
-			<HeaderLink href="/">Start</HeaderLink>
-			<HeaderLink href="/blog">News</HeaderLink>
-			<HeaderLink href="/foerderkreis">Förderkreis</HeaderLink>
-			<HeaderLink href="/projekte">Projekte</HeaderLink>
-		</div>
-		<a href="/mitglied-werden" class="cta-button">
-			<span class="cta-text">Mitglied werden</span>
+		<a href="/" class="logo-link">
+			<Image src={logo} alt="Oranienschule Wiesbaden" width="400" height="115" />
 		</a>
+		
+		<!-- Mobile hamburger menu button -->
+		<button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+			<span class="hamburger-line"></span>
+			<span class="hamburger-line"></span>
+			<span class="hamburger-line"></span>
+		</button>
+		
+		<div class="nav-content">
+			<div class="internal-links">
+				<HeaderLink href="/">Start</HeaderLink>
+				<HeaderLink href="/blog">News</HeaderLink>
+				<HeaderLink href="/foerderkreis">Förderkreis</HeaderLink>
+				<HeaderLink href="/projekte">Projekte</HeaderLink>
+			</div>
+			<a href="/mitglied-werden" class="cta-button">
+				<span class="cta-text">Mitglied werden</span>
+			</a>
+		</div>
 	</nav>
 </header>
+
+<script>
+	// Mobile menu toggle functionality
+	document.addEventListener('DOMContentLoaded', function() {
+		const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+		const navContent = document.querySelector('.nav-content');
+		
+		if (mobileMenuToggle && navContent) {
+			mobileMenuToggle.addEventListener('click', function() {
+				navContent.classList.toggle('mobile-open');
+				mobileMenuToggle.classList.toggle('active');
+			});
+			
+			// Close menu when clicking on a link
+			const navLinks = navContent.querySelectorAll('a');
+			navLinks.forEach(link => {
+				link.addEventListener('click', function() {
+					navContent.classList.remove('mobile-open');
+					mobileMenuToggle.classList.remove('active');
+				});
+			});
+			
+			// Close menu when clicking outside
+			document.addEventListener('click', function(event) {
+				const target = event.target as Element;
+				if (target && !target.closest('nav')) {
+					navContent.classList.remove('mobile-open');
+					mobileMenuToggle.classList.remove('active');
+				}
+			});
+		}
+	});
+</script>
+
 <style>
 	header {
 		margin: 0;
 		padding: 0 1em;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		position: relative;
+		z-index: 1000;
 	}
+	
 	h2 {
 		margin: 0;
 		font-size: 1em;
@@ -39,24 +88,81 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 	h2 a.active {
 		text-decoration: none;
 	}
+	
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		position: relative;
 	}
+	
+	.logo-link {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
+	
 	nav a {
 		padding: 1em 0.5em;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
+	
 	nav a.active {
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
+	
+	.nav-content {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+	}
+	
+	.internal-links {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	
 	.social-links,
 	.social-links a {
 		display: flex;
+	}
+	
+	/* Mobile menu toggle button */
+	.mobile-menu-toggle {
+		display: none !important;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 35px;
+		height: 30px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		z-index: 10;
+	}
+	
+	.hamburger-line {
+		width: 100%;
+		height: 3px;
+		background: #333;
+		border-radius: 2px;
+		transition: all 0.3s ease;
+	}
+	
+	.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+	
+	.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+		opacity: 0;
+	}
+	
+	.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+		transform: rotate(-45deg) translate(7px, -6px);
 	}
 	
 	/* CTA Button Styling */
@@ -113,18 +219,112 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 		transform: translateX(3px);
 	}
 	
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
+	/* Mobile Styles */
+	@media (max-width: 900px) {
+		.mobile-menu-toggle {
+			display: flex !important;
+		}
+		
+		.nav-content {
+			position: fixed;
+			top: 0;
+			right: -100%;
+			width: 280px;
+			height: 100vh;
+			background: white;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			padding: 80px 2rem 2rem 2rem;
+			box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+			transition: right 0.3s ease;
+			gap: 2rem;
+		}
+		
+		.nav-content.mobile-open {
+			right: 0;
+		}
+		
+		.internal-links {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1.5rem;
+			width: 100%;
+		}
+		
+		.internal-links a {
+			padding: 0.75rem 0;
+			font-size: 1.1rem;
+			width: 100%;
+			border-bottom: 2px solid #f0f0f0;
+		}
+		
+		.internal-links a:last-child {
+			border-bottom: none;
 		}
 		
 		.cta-button {
-			min-width: 120px;
-			padding: 6px 10px !important;
+			width: 100%;
+			min-width: auto;
+			padding: 12px 18px !important;
+			justify-content: center;
+			margin-left: 16px;
+			margin-right: 16px;
+			box-sizing: border-box;
 		}
 		
 		.cta-text {
-			font-size: 0.85em;
+			font-size: 1rem;
+		}
+		
+		/* Logo sizing for mobile */
+		.logo-link img {
+			max-width: 250px;
+			height: auto;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		header {
+			padding: 0 0.5em;
+		}
+		
+		.nav-content {
+			width: 100%;
+			right: -100%;
+		}
+		
+		.logo-link img {
+			max-width: 200px;
+		}
+		
+		.cta-button {
+			padding: 10px 16px !important;
+		}
+		
+		.cta-text {
+			font-size: 0.9rem;
+		}
+	}
+	
+	/* Tablet adjustments */
+	@media (min-width: 769px) and (max-width: 1024px) {
+		.internal-links {
+			gap: 0.75rem;
+		}
+		
+		nav a {
+			padding: 0.75em 0.4em;
+		}
+		
+		.cta-button {
+			min-width: 130px;
+			padding: 6px 14px !important;
+		}
+		
+		.cta-text {
+			font-size: 0.9em;
 		}
 	}
 </style>
+
