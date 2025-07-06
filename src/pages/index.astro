@@ -9,6 +9,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="de">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 		<Header />
@@ -109,65 +110,75 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 </html>
 
 <style>
+	html, body {
+		max-width: 100vw;
+		overflow-x: hidden;
+	}
+
 	main {
 		max-width: 1200px;
+		width: 100%;
 		margin: 0 auto;
-		padding: 2rem 1rem;
+		padding: 1rem;
+		box-sizing: border-box;
 	}
 
 	h1 {
-		font-size: 2.5rem;
+		font-size: clamp(1.5rem, 4vw, 2.5rem);
 		font-weight: bold;
 		color: #1f2937;
 		text-align: center;
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
+		line-height: 1.2;
 	}
 
 	h2 {
-		font-size: 2rem;
+		font-size: clamp(1.25rem, 3.5vw, 2rem);
 		font-weight: bold;
 		color: #1f2937;
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
 		text-align: center;
+		line-height: 1.3;
 	}
 
 	h3 {
-		font-size: 1.25rem;
+		font-size: clamp(1rem, 2.5vw, 1.25rem);
 		font-weight: bold;
 		color: #1f2937;
 		margin-bottom: 0.75rem;
+		line-height: 1.3;
 	}
 
 	.hero-section {
 		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 		color: white;
-		padding: 3rem 2rem;
+		padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem);
 		border-radius: 12px;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 		text-align: center;
 	}
 
 	.hero-text {
-		font-size: 1.25rem;
+		font-size: clamp(1rem, 2.5vw, 1.25rem);
 		line-height: 1.6;
 		max-width: 800px;
 		margin: 0 auto;
 	}
 
 	.overview-section {
-		margin-bottom: 4rem;
+		margin-bottom: 3rem;
 	}
 
 	.features-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 2rem;
-		margin-top: 2rem;
+		gap: 1.5rem;
+		margin-top: 1.5rem;
 	}
 
 	.feature-card {
 		background: white;
-		padding: 2rem;
+		padding: clamp(1.5rem, 4vw, 2rem);
 		border-radius: 12px;
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 		transition: transform 0.2s ease-in-out;
@@ -180,21 +191,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	.feature-card p {
 		color: #6b7280;
 		line-height: 1.6;
+		font-size: clamp(0.875rem, 2vw, 1rem);
 	}
 
 	.projects-preview {
 		background: #f8fafc;
-		padding: 3rem 2rem;
+		padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem);
 		border-radius: 12px;
-		margin-bottom: 4rem;
+		margin-bottom: 3rem;
 		text-align: center;
 	}
 
 	.projects-preview p {
-		font-size: 1.1rem;
+		font-size: clamp(1rem, 2.5vw, 1.1rem);
 		color: #374151;
 		max-width: 600px;
-		margin: 0 auto 2rem auto;
+		margin: 0 auto 1.5rem auto;
 		line-height: 1.6;
 	}
 
@@ -206,28 +218,28 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	}
 
 	.support-section {
-		margin-bottom: 4rem;
+		margin-bottom: 3rem;
 	}
 
 	.support-section p {
 		text-align: center;
-		font-size: 1.1rem;
+		font-size: clamp(1rem, 2.5vw, 1.1rem);
 		color: #374151;
 		max-width: 600px;
-		margin: 0 auto 2rem auto;
+		margin: 0 auto 1.5rem auto;
 		line-height: 1.6;
 	}
 
 	.support-options {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		margin-top: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
+		margin-top: 1.5rem;
 	}
 
 	.support-option {
 		background: white;
-		padding: 2rem;
+		padding: clamp(1.5rem, 4vw, 2rem);
 		border-radius: 12px;
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 		text-align: center;
@@ -237,30 +249,33 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		color: #6b7280;
 		margin-bottom: 1.5rem;
 		line-height: 1.6;
+		font-size: clamp(0.875rem, 2vw, 1rem);
 	}
 
 	.news-section {
 		background: #f8fafc;
-		padding: 3rem 2rem;
+		padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem);
 		border-radius: 12px;
 		text-align: center;
 	}
 
 	.news-section p {
-		font-size: 1.1rem;
+		font-size: clamp(1rem, 2.5vw, 1.1rem);
 		color: #374151;
 		max-width: 600px;
-		margin: 0 auto 2rem auto;
+		margin: 0 auto 1.5rem auto;
 		line-height: 1.6;
 	}
 
 	.btn {
 		display: inline-block;
-		padding: 0.75rem 1.5rem;
+		padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
 		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 500;
 		transition: all 0.2s ease-in-out;
+		font-size: clamp(0.875rem, 2vw, 1rem);
+		white-space: nowrap;
 	}
 
 	.btn-primary {
@@ -295,34 +310,59 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		transform: translateY(-2px);
 	}
 
+	/* Mobile-specific improvements */
 	@media (max-width: 768px) {
-		h1 {
-			font-size: 2rem;
-		}
-
-		h2 {
-			font-size: 1.75rem;
-		}
-
-		.hero-section {
-			padding: 2rem 1rem;
-		}
-
-		.hero-text {
-			font-size: 1.1rem;
+		main {
+			padding: 0.5rem;
 		}
 
 		.features-grid {
 			grid-template-columns: 1fr;
+			gap: 1rem;
 		}
 
 		.support-options {
 			grid-template-columns: 1fr;
+			gap: 1rem;
 		}
 
 		.cta-buttons {
 			flex-direction: column;
 			align-items: center;
+			gap: 0.75rem;
+		}
+
+		.btn {
+			width: 100%;
+			max-width: 300px;
+			text-align: center;
+		}
+
+		.hero-section,
+		.projects-preview,
+		.news-section {
+			margin-left: 0.5rem;
+			margin-right: 0.5rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		main {
+			padding: 0.25rem;
+		}
+
+		.hero-section,
+		.projects-preview,
+		.news-section {
+			margin-left: 0.25rem;
+			margin-right: 0.25rem;
+			border-radius: 8px;
+		}
+
+		.feature-card,
+		.support-option {
+			padding: 1rem;
+			border-radius: 8px;
 		}
 	}
 </style>

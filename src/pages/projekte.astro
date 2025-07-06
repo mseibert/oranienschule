@@ -263,9 +263,6 @@ import foerderkreis_ag from '../assets/images/foeag.jpeg';
 				<a href="/Foerderkreis/spendeninformation" class="cta-button primary">
 					Jetzt unterstützen
 				</a>
-				<a href="/Foerderkreis" class="cta-button secondary">
-					Zurück zur Übersicht
-				</a>
 			</div>
 		</section>
 	</div>
@@ -612,15 +609,21 @@ import foerderkreis_ag from '../assets/images/foeag.jpeg';
 		gap: 1rem;
 		justify-content: center;
 		flex-wrap: wrap;
+		padding: 0 2rem;
 	}
 
 	.cta-button {
-		display: inline-block;
+		display: block;
+		width: 100%;
+		max-width: 400px;
+		margin: 0.5rem auto;
 		padding: 0.75rem 2rem;
 		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 600;
 		transition: all 0.2s ease;
+		box-sizing: border-box;
+		text-align: center;
 	}
 
 	.cta-button.primary {
@@ -643,6 +646,18 @@ import foerderkreis_ag from '../assets/images/foeag.jpeg';
 		background: white;
 		color: #3b82f6;
 		transform: translateY(-2px);
+	}
+
+	@media (min-width: 600px) {
+		.cta-buttons {
+			flex-direction: row;
+			padding: 0 4rem;
+		}
+		.cta-button {
+			width: auto;
+			min-width: 200px;
+			margin: 0.5rem;
+		}
 	}
 
 	/* Responsive Design */
