@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
 import HeaderLink from '../components/HeaderLink.astro';
+import { Image } from 'astro:assets';
+import foerderkreis_ag from '../assets/images/foeag.jpeg';
 ---
 
 
@@ -11,8 +13,9 @@ import HeaderLink from '../components/HeaderLink.astro';
     title="HALLO. WIR SIND DER FÖRDERKREIS"
 	description="Bitte jetzt meinen Text...."
 	pubDate={new Date('Uns gibt es seit 1999')}
-	heroImage='/FoeKreis_AG.jpeg'
->
+	heroImage={foerderkreis_ag.src}
+
+	>
 
 <!-- Sticky Navigation Bar -->
 

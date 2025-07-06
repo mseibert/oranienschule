@@ -1,13 +1,16 @@
 ---
 import Layout from '../../layouts/BlogPost.astro';
 import HeaderLink from '../../components/HeaderLink.astro';
+import { Image } from 'astro:assets';
+import foerderkreis_ag from '../../assets/images/foeag.jpeg';
+
 ---
 
 <Layout
 	title="UNSERE PROJEKTE"
 	description="Entdecken Sie die vielfältigen Projekte des Förderkreises der Oranienschule und erfahren Sie, wie Ihre Unterstützung wirkt."
 	pubDate={new Date()}
-	heroImage='/FoeKreis_AG.jpeg'
+	heroImage={foerderkreis_ag.src}
 >
 	<!-- Sticky Navigation Bar -->
 	<nav class="sticky-nav">
