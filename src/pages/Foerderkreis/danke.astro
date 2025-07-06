@@ -1,13 +1,16 @@
 ---
 import Layout from '../../layouts/BlogPost.astro';
 import HeaderLink from '../../components/HeaderLink.astro';
+import { Image } from 'astro:assets';
+import foerderkreis_ag from '../../assets/images/foeag.jpeg';
+---
 ---
 
 <Layout
 	title="VIELEN DANK FÜR IHRE UNTERSTÜTZUNG!"
 	description="Wir danken allen Mitgliedern und Spendern des Förderkreises der Oranienschule für ihre wertvolle Unterstützung."
 	pubDate={new Date()}
-	heroImage='/FoeKreis_AG.jpeg'
+	heroImage={foerderkreis_ag.src}
 >
 	<!-- Sticky Navigation Bar -->
 	<nav class="sticky-nav">

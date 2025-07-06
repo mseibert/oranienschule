@@ -1,12 +1,14 @@
 ---
 import Layout from '../../layouts/BlogPost.astro';
+import { Image } from 'astro:assets';
+import foerderkreis_qrcode from '../../assets/images/foeqrcode.png';
 ---
 
 <Layout
 	title="SPENDENINFORMATION"
 	description="Informationen zum Spenden für den Förderkreis der Oranienschule Wiesbaden"
 	pubDate={new Date('December 19 2024')}
-	heroImage="/qrcode_Foerderkreis.png"
+	heroImage={foerderkreis_qrcode.src}
 	heroImageWidth={300}
 	heroImageHeight={300}
 >
