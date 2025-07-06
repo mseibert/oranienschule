@@ -1,68 +1,100 @@
-# Astro Starter Kit: Blog
+# Förderkreis der Oranienschule Wiesbaden - Website
 
-```sh
-npm create astro@latest -- --template blog
+Die offizielle Website des Förderkreises der Oranienschule Wiesbaden. Diese Website informiert über unsere Arbeit, Projekte und Möglichkeiten zur Unterstützung der Schule.
+
+## 🎯 Über uns
+
+Der Förderkreis der Oranienschule Wiesbaden setzt sich seit 1999 für die Förderung und Unterstützung der Oranienschule ein. Mit über 300 engagierten Mitgliedern aus der Elternschaft, dem Lehrerkollegium und von Ehemaligen schaffen wir gemeinsam eine bessere Lernumgebung für alle Schüler:innen.
+
+### Unsere Schwerpunkte
+
+- 🎵 **Musikalische Förderung** - Unterstützung von Musik- und Theaterprojekten
+- 🌱 **Umweltbildung** - Schulgarten-Projekt und Nachhaltigkeitsinitiativen  
+- 💻 **Digitale Bildung** - Moderne Lernplattformen und digitale Ausstattung
+- 🏃‍♂️ **Sport & Bewegung** - Sportgeräte und Fitness-Equipment
+
+## 🚀 Technische Details
+
+Diese Website wurde mit [Astro](https://astro.build) entwickelt und bietet:
+
+- ✅ Responsive Design für alle Geräte
+- ✅ SEO-optimiert mit OpenGraph und Sitemap
+- ✅ RSS-Feed für News-Updates
+- ✅ Markdown & MDX Support für Blog-Inhalte
+- ✅ Schnelle Ladezeiten und optimale Performance
+- ✅ Deutsche Lokalisierung
+
+## 📁 Projektstruktur
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
+├── public/                 # Statische Assets (Bilder, PDFs, etc.)
 ├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+│   ├── components/         # Wiederverwendbare UI-Komponenten
+│   ├── content/           # Blog-Inhalte und Markdown-Dateien
+│   ├── layouts/           # Seiten-Layouts
+│   ├── pages/             # Astro-Seiten (Routing)
+│   └── styles/            # CSS-Styles
+├── astro.config.mjs       # Astro-Konfiguration
+└── package.json           # Abhängigkeiten und Scripts
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Entwicklung
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Voraussetzungen
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+- Node.js (Version 18 oder höher)
+- pnpm
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Installation
 
-## 🧞 Commands
+```bash
+# Abhängigkeiten installieren
+pnpm install
 
-All commands are run from the root of the project, from a terminal:
+# Entwicklungsserver starten
+pnpm dev
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Die Website ist dann unter `http://localhost:4321` verfügbar.
 
-## 👀 Want to learn more?
+### Build & Deployment
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+# Produktions-Build erstellen
+pnpm build
 
-## Credit
+# Build lokal testen
+pnpm preview
+```
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+## 📄 Verfügbare Seiten
+
+- **Startseite** (`/`) - Überblick über den Förderkreis
+- **Über uns** (`/about`) - Detaillierte Informationen
+- **Förderkreis** (`/foerderkreis`) - Mitgliedschaft und Engagement
+- **Projekte** (`/projekte`) - Aktuelle und abgeschlossene Projekte
+- **Blog** (`/blog`) - News und Updates
+- **Kontakt** (`/contact`) - Kontaktformular
+- **Spenden** (`/spendeninformation`) - Spendenmöglichkeiten
+- **Mitglied werden** (`/mitglied-werden`) - Mitgliedschaft beantragen
+
+## 🤝 Unterstützen Sie uns
+
+Der Förderkreis freut sich über jede Form der Unterstützung:
+
+- **Mitgliedschaft** - Werden Sie Teil unserer Gemeinschaft
+- **Spenden** - Unterstützen Sie unsere Projekte finanziell
+- **Engagement** - Bringen Sie sich aktiv ein
+
+## 📞 Kontakt
+
+Bei Fragen oder Anregungen erreichen Sie uns über das Kontaktformular auf der Website oder direkt über die Schule.
+
+## 📄 Lizenz
+
+Diese Website ist für den Förderkreis der Oranienschule Wiesbaden entwickelt. Alle Rechte vorbehalten.
+
+---
+
+**Förderkreis der Oranienschule Wiesbaden**  
+Gymnasium der Landeshauptstadt Wiesbaden
