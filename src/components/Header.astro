@@ -33,6 +33,7 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 				<span class="cta-text">Mitglied werden</span>
 			</a>
 		</div>
+		<div class="menu-overlay"></div>
 	</nav>
 </header>
 
@@ -41,11 +42,13 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 	document.addEventListener('DOMContentLoaded', function() {
 		const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 		const navContent = document.querySelector('.nav-content');
+		const menuOverlay = document.querySelector('.menu-overlay');
 		
 		if (mobileMenuToggle && navContent) {
 			mobileMenuToggle.addEventListener('click', function() {
 				navContent.classList.toggle('mobile-open');
 				mobileMenuToggle.classList.toggle('active');
+				if (menuOverlay) menuOverlay.classList.toggle('active');
 			});
 			
 			// Close menu when clicking on a link
@@ -54,6 +57,7 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 				link.addEventListener('click', function() {
 					navContent.classList.remove('mobile-open');
 					mobileMenuToggle.classList.remove('active');
+					if (menuOverlay) menuOverlay.classList.remove('active');
 				});
 			});
 			
@@ -63,8 +67,17 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 				if (target && !target.closest('nav')) {
 					navContent.classList.remove('mobile-open');
 					mobileMenuToggle.classList.remove('active');
+					if (menuOverlay) menuOverlay.classList.remove('active');
 				}
 			});
+			// Close menu when clicking on overlay
+			if (menuOverlay) {
+				menuOverlay.addEventListener('click', function() {
+					navContent.classList.remove('mobile-open');
+					mobileMenuToggle.classList.remove('active');
+					menuOverlay.classList.remove('active');
+				});
+			}
 		}
 	});
 </script>
@@ -231,7 +244,8 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 			position: fixed;
 			top: 0;
 			right: -100%;
-			width: 280px;
+			width: 80vw;
+			max-width: 320px;
 			height: 100vh;
 			background: white;
 			flex-direction: column;
@@ -291,6 +305,24 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 			max-width: 250px;
 			height: auto;
 		}
+		
+		.menu-overlay {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: rgba(0,0,0,0.3);
+			z-index: 1000;
+			transition: opacity 0.3s ease;
+			opacity: 0;
+		}
+		
+		.menu-overlay.active {
+			display: block;
+			opacity: 1;
+		}
 	}
 	
 	@media (max-width: 480px) {
@@ -299,8 +331,8 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 		}
 		
 		.nav-content {
-			width: 100%;
-			right: -100%;
+			width: 90vw;
+			max-width: 100vw;
 		}
 		
 		.logo-link img {
