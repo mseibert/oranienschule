@@ -239,12 +239,19 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 			justify-content: flex-start;
 			padding: 80px 2rem 2rem 2rem;
 			box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-			transition: right 0.3s ease;
+			transition: right 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
 			gap: 2rem;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			z-index: 1001;
 		}
 		
 		.nav-content.mobile-open {
 			right: 0;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
 		}
 		
 		.internal-links {
