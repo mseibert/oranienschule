@@ -13,23 +13,13 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 		<a href="/"><Image src="/oranienschule-logo.png" alt="Oranienschule Wiesbaden" width="400" height="115" /></a>
 		<div class="internal-links">
 			<HeaderLink href="/">Start</HeaderLink>
-			<HeaderLink href="/blog">Meldungen</HeaderLink>
-			<HeaderLink href="/">Menschen</HeaderLink>
-			<HeaderLink href="/">Lernen</HeaderLink>
-			<HeaderLink href="/Foerderkreis">Förderkreis</HeaderLink>
+			<HeaderLink href="/blog">News</HeaderLink>
+			<HeaderLink href="/foerderkreis">Förderkreis</HeaderLink>
+			<HeaderLink href="/projekte">Projekte</HeaderLink>
 		</div>
-		<div class="social-links">
-			<a href="https://www.instagram.com/oranienschule_wiesbaden/" target="_blank">
-				<span class="sr-only">Oranienschule bei Instagram</span>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" width="32" height="32"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-			</a>
-			<a href="https://oranienschule-wiesbaden-wiki.de/" target="_blank">
-				<span class="sr-only">Wiki der Oranienschule</span>
-				<svg viewBox="0 0 640 512" aria-hidden="true" width="32" height="32">
-					<path d="M640 51.2l-.3 12.2c-28.1 .8-45 15.8-55.8 40.3-25 57.8-103.3 240-155.3 358.6H415l-81.9-193.1c-32.5 63.6-68.3 130-99.2 193.1-.3 .3-15 0-15-.3C172 352.3 122.8 243.4 75.8 133.4 64.4 106.7 26.4 63.4 .2 63.7c0-3.1-.3-10-.3-14.2h161.9v13.9c-19.2 1.1-52.8 13.3-43.3 34.2 21.9 49.7 103.6 240.3 125.6 288.6 15-29.7 57.8-109.2 75.3-142.8-13.9-28.3-58.6-133.9-72.8-160-9.7-17.8-36.1-19.4-55.8-19.7V49.8l142.5 .3v13.1c-19.4 .6-38.1 7.8-29.4 26.1 18.9 40 30.6 68.1 48.1 104.7 5.6-10.8 34.7-69.4 48.1-100.8 8.9-20.6-3.9-28.6-38.6-29.4 .3-3.6 0-10.3 .3-13.6 44.4-.3 111.1-.3 123.1-.6v13.6c-22.5 .8-45.8 12.8-58.1 31.7l-59.2 122.8c6.4 16.1 63.3 142.8 69.2 156.7L559.2 91.8c-8.6-23.1-36.4-28.1-47.2-28.3V49.6l127.8 1.1 .2 .5z"/>
-				</svg>
-			</a>
-		</div>
+		<a href="/mitglied-werden" class="cta-button">
+			<span class="cta-text">Mitglied werden</span>
+		</a>
 	</nav>
 </header>
 <style>
@@ -68,9 +58,72 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 		display: flex;
 	}
 	
+	/* CTA Button Styling */
+	.cta-button {
+		background: #ff6600;
+		color: white !important;
+		padding: 7px 18px !important;
+		border-radius: 6px;
+		font-weight: 500;
+		font-size: 1em;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+		transition: all 0.3s ease;
+		box-shadow: 0 2px 8px rgba(255, 102, 0, 0.3);
+		border: none;
+		min-width: 140px;
+		text-align: center;
+		line-height: 1.2;
+		vertical-align: middle;
+	}
+	
+	.cta-button:hover {
+		background: #e55a00;
+		transform: translateY(-1px);
+		box-shadow: 0 4px 12px rgba(255, 102, 0, 0.4);
+	}
+	
+	.cta-button:active {
+		transform: translateY(0);
+		box-shadow: 0 2px 6px rgba(255, 102, 0, 0.3);
+	}
+	
+	.cta-text {
+		font-size: 1em;
+		font-weight: 500;
+		line-height: 1.2;
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.cta-icon {
+		font-size: 1em;
+		font-weight: bold;
+		transition: transform 0.3s ease;
+		line-height: 1.2;
+		vertical-align: middle;
+	}
+	
+	.cta-button:hover .cta-icon {
+		transform: translateX(3px);
+	}
+	
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+		
+		.cta-button {
+			min-width: 120px;
+			padding: 6px 10px !important;
+		}
+		
+		.cta-text {
+			font-size: 0.85em;
 		}
 	}
 </style>

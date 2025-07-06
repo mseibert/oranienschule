@@ -8,7 +8,7 @@ import vercel from '@astrojs/vercel';
 // https://astro.build/config
 export default defineConfig({
 	output: 'static',
-  site: 'https://example.com',
+  site: 'https://foerderkeis.oranienschule.de',
   integrations: [mdx(), sitemap()],
   adapter: vercel(),
 });

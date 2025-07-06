@@ -1,8 +1,8 @@
 ---
-import Layout from '../../layouts/BlogPost.astro';
-import HeaderLink from '../../components/HeaderLink.astro';
+import Layout from '../layouts/BlogPost.astro';
+import HeaderLink from '../components/HeaderLink.astro';
 import { Image } from 'astro:assets';
-import foerderkreis_ag from '../../assets/images/foeag.jpeg';
+import foerderkreis_ag from '../assets/images/foeag.jpeg';
 
 ---
 
@@ -12,15 +12,6 @@ import foerderkreis_ag from '../../assets/images/foeag.jpeg';
 	pubDate={new Date()}
 	heroImage={foerderkreis_ag.src}
 >
-	<!-- Sticky Navigation Bar -->
-	<nav class="sticky-nav">
-		<div class="nav-container">
-			<HeaderLink href="/Foerderkreis">Main</HeaderLink>
-			<HeaderLink href="/Foerderkreis/projekte">Projekte</HeaderLink>
-			<HeaderLink href="/Foerderkreis/spendeninformation">Spendeninformationen</HeaderLink>
-			<HeaderLink href="/Foerderkreis/danke">Danke</HeaderLink>
-		</div>
-	</nav>
 
 	<div class="projects-content">
 		<div class="projects-header">
