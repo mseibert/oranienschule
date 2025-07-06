@@ -2,6 +2,7 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 import { Image } from 'astro:assets';
+import logo from '../assets/images/transparentes-logo.png';
 
 // Check if we're on the Förderkreis page
 const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
@@ -10,7 +11,7 @@ const isFoerderkreisPage = pathname === '/Foerderkreis' || pathname.startsWith('
 
 <header>
 	<nav>
-		<a href="/"><Image src="/oranienschule-logo.png" alt="Oranienschule Wiesbaden" width="400" height="115" /></a>
+		<a href="/"><Image src={logo} alt="Oranienschule Wiesbaden" width="400" height="115" /></a>
 		<div class="internal-links">
 			<HeaderLink href="/">Start</HeaderLink>
 			<HeaderLink href="/blog">News</HeaderLink>
