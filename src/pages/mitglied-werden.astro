@@ -1,0 +1,461 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+import HeaderLink from '../components/HeaderLink.astro';
+import { Image } from 'astro:assets';
+import foerderkreis_ag from '../assets/images/foeag.jpeg';
+---
+---
+
+<Layout
+	title="Mitglied werden"
+	description="Werden Sie Mitglied im Förderkreis der Oranienschule und unterstützen Sie die Bildung unserer Schülerinnen und Schüler."
+	pubDate={new Date()}
+>
+		<!-- Why Join Section -->
+		<section class="why-join-section">
+			<div class="reasons-grid">
+				<div class="reason-card">
+					<div class="reason-icon">🎯</div>
+					<h3>Die Stütze des Vereins</h3>
+					<p>Die Vereinsmitglieder sind <strong>die Stütze</strong> dafür, unseren Vereinszweck mit Leben füllen zu können.</p>
+				</div>
+				<div class="reason-card">
+					<div class="reason-icon">👥</div>
+					<h3>Gemeinsame Wirkung</h3>
+					<p>Es lohnt sich, Mitglied im Förderkreis zu werden, weil alle Schülerinnen und Schüler davon profitieren.</p>
+				</div>
+				<div class="reason-card">
+					<div class="reason-icon">💪</div>
+					<h3>Kleiner Beitrag, große Wirkung</h3>
+					<p>Ein kleiner Beitrag für jeden Einzelnen – große Wirkung für alle. Der Mitgliedsbeitrag kann selbst und frei gewählt werden.</p>
+				</div>
+				<div class="reason-card">
+					<div class="reason-icon">💯</div>
+					<h3>100% für die Kinder</h3>
+					<p><strong>Jeder Euro zählt und 100 % der Spenden kommen direkt den Kindern zugute.</strong></p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contribution Stats -->
+		<section class="stats-section">
+			<h2>Ihre Unterstützung im Überblick</h2>
+			<div class="stats-grid">
+				<div class="stat-card">
+					<span class="stat-number">24-120€</span>
+					<span class="stat-label">Jährlicher Beitrag (meistens)</span>
+				</div>
+				<div class="stat-card">
+					<span class="stat-number">41€</span>
+					<span class="stat-label">Durchschnittlicher Beitrag</span>
+				</div>
+				<div class="stat-card">
+					<span class="stat-number">50€</span>
+					<span class="stat-label">Median-Beitrag</span>
+				</div>
+				<div class="stat-card">
+					<span class="stat-number">300+</span>
+					<span class="stat-label">Aktive Mitglieder</span>
+				</div>
+			</div>
+			<p class="stats-note">
+				Einige Mitglieder spenden sogar vierstellige Beträge. <strong>Hilf' mit und werde heute noch Mitglied!</strong>
+			</p>
+		</section>
+
+		<!-- Application Section -->
+		<section class="application-section">
+			<h2>Online-Antrag</h2>
+			<div class="application-options">
+				<div class="application-card primary">
+					<h3>Online-Antrag</h3>
+					<p>Bequem und schnell online ausfüllen</p>
+					<a href="https://bit.ly/oranienschulefoerdern" class="application-button primary">
+						Antrag »Online« in neuem Tab öffnen
+					</a>
+				</div>
+				<div class="application-card secondary">
+					<h3>Klassischer Antrag</h3>
+					<p>PDF-Formular zum Download</p>
+					<a href="/mitgliedsantrag-foerderkreis-oranienschule.pdf" class="application-button secondary">
+						»Klassischer« Mitgliedsantrag (PDF)
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="contact-section">
+			<h2>Anfragen oder Anregungen?</h2>
+			<p>
+				Wir sind jederzeit über E-Mail erreichbar unter 
+				<a href="mailto:foerderkreis@oranienschule.de">foerderkreis@oranienschule.de</a>
+			</p>
+		</section>
+
+		<!-- Additional Links -->
+		<section class="additional-links">
+			<h2>Weitere Informationen</h2>
+			<div class="links-grid">
+				<a href="/spendeninformation" class="link-card">
+					<h3>Spendeninformationen</h3>
+					<p>Erfahren Sie mehr über unsere Spendenmöglichkeiten</p>
+				</a>
+				<a href="/projekte" class="link-card">
+					<h3>Unsere Projekte</h3>
+					<p>Sehen Sie, was wir mit Ihrer Unterstützung erreichen</p>
+				</a>
+				<a href="/about" class="link-card">
+					<h3>Über uns</h3>
+					<p>Lernen Sie den Förderkreis kennen</p>
+				</a>
+			</div>
+		</section>
+
+		<!-- Footer Info -->
+		<div class="footer-info">
+			<p>
+				<strong>Förderkreis der Oranienschule, Gymnasium der LH Wiesbaden e.V.</strong><br>
+				vertreten durch Martin Seibert und Bernd Münker<br>
+				Oranienstr. 5-7, 65185 Wiesbaden
+			</p>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	/* Content Container */
+	.membership-content {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+
+	/* Hero Section */
+	.hero-section {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.hero-section h1 {
+		font-size: 3rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1.25rem;
+		color: #6b7280;
+		line-height: 1.7;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	/* Why Join Section */
+	.why-join-section {
+		margin-bottom: 4rem;
+	}
+
+	.why-join-section h2 {
+		font-size: 2.5rem;
+		font-weight: bold;
+		color: #1f2937;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.reasons-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+	}
+
+	.reason-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		transition: transform 0.2s ease;
+	}
+
+	.reason-card:hover {
+		transform: translateY(-4px);
+	}
+
+	.reason-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.reason-card h3 {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 1rem;
+	}
+
+	.reason-card p {
+		color: #6b7280;
+		line-height: 1.6;
+	}
+
+	/* Stats Section */
+	.stats-section {
+		background: #f8fafc;
+		padding: 3rem 2rem;
+		border-radius: 12px;
+		margin-bottom: 4rem;
+		text-align: center;
+	}
+
+	.stats-section h2 {
+		font-size: 2.5rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 3rem;
+	}
+
+	.stats-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.stat-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.stat-number {
+		font-size: 2.5rem;
+		font-weight: bold;
+		color: #3b82f6;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		color: #6b7280;
+		font-size: 0.9rem;
+		text-align: center;
+	}
+
+	.stats-note {
+		font-size: 1.1rem;
+		color: #374151;
+		line-height: 1.6;
+	}
+
+	/* Application Section */
+	.application-section {
+		margin-bottom: 4rem;
+		text-align: center;
+	}
+
+	.application-section h2 {
+		font-size: 2.5rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 3rem;
+	}
+
+	.application-options {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.application-card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	.application-card.primary {
+		border: 3px solid #3b82f6;
+	}
+
+	.application-card.secondary {
+		border: 3px solid #e5e7eb;
+	}
+
+	.application-card h3 {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 1rem;
+	}
+
+	.application-card p {
+		color: #6b7280;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	.application-button {
+		display: inline-block;
+		padding: 1rem 2rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.2s ease;
+	}
+
+	.application-button.primary {
+		background: #3b82f6;
+		color: white;
+	}
+
+	.application-button.primary:hover {
+		background: #2563eb;
+		transform: translateY(-2px);
+	}
+
+	.application-button.secondary {
+		background: white;
+		color: #374151;
+		border: 2px solid #d1d5db;
+	}
+
+	.application-button.secondary:hover {
+		background: #f9fafb;
+		border-color: #9ca3af;
+		transform: translateY(-2px);
+	}
+
+	/* Contact Section */
+	.contact-section {
+		background: #f0f9ff;
+		padding: 3rem 2rem;
+		border-radius: 12px;
+		margin-bottom: 4rem;
+		text-align: center;
+	}
+
+	.contact-section h2 {
+		font-size: 2rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 1rem;
+	}
+
+	.contact-section p {
+		font-size: 1.1rem;
+		color: #374151;
+		line-height: 1.6;
+	}
+
+	.contact-section a {
+		color: #3b82f6;
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.contact-section a:hover {
+		text-decoration: underline;
+	}
+
+	/* Additional Links */
+	.additional-links {
+		margin-bottom: 4rem;
+	}
+
+	.additional-links h2 {
+		font-size: 2.5rem;
+		font-weight: bold;
+		color: #1f2937;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.links-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.link-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+		color: inherit;
+		transition: transform 0.2s ease;
+	}
+
+	.link-card:hover {
+		transform: translateY(-4px);
+	}
+
+	.link-card h3 {
+		font-size: 1.25rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 1rem;
+	}
+
+	.link-card p {
+		color: #6b7280;
+		line-height: 1.6;
+	}
+
+	/* Footer Info */
+	.footer-info {
+		background: #f8fafc;
+		padding: 2rem;
+		border-radius: 12px;
+		text-align: center;
+		border-left: 4px solid #3b82f6;
+	}
+
+	.footer-info p {
+		color: #374151;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.hero-section h1 {
+			font-size: 2.5rem;
+		}
+		
+		.why-join-section h2,
+		.stats-section h2,
+		.application-section h2,
+		.additional-links h2 {
+			font-size: 2rem;
+		}
+		
+		.reasons-grid,
+		.stats-grid,
+		.application-options,
+		.links-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.application-card {
+			padding: 2rem;
+		}
+		
+		.stats-section {
+			padding: 2rem 1rem;
+		}
+		
+		.contact-section {
+			padding: 2rem 1rem;
+		}
+	}
+</style> 

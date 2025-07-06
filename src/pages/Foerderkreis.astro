@@ -5,239 +5,290 @@ import { Image } from 'astro:assets';
 import foerderkreis_ag from '../assets/images/foeag.jpeg';
 ---
 
-
-
-
 <Layout
-
     title="HALLO. WIR SIND DER FÖRDERKREIS"
-	description="Bitte jetzt meinen Text...."
-	pubDate={new Date('Uns gibt es seit 1999')}
-	heroImage={foerderkreis_ag.src}
+    description="Der Förderkreis der Oranienschule hat derzeit über 300 engagierte Mitglieder. Wir fördern die Schüler:innen und unterstützen die Schule bei Projekten und Anschaffungen."
+    pubDate={new Date('1999-01-01')}
+    heroImage={foerderkreis_ag.src}
+>
 
-	>
+    <p>
+        Der Förderkreis der Oranienschule hat derzeit über 300 engagierte Mitglieder, vor allem aus der Elternschaft, aber auch Lehrer und Ehemalige unterstützen uns mit ihren Beiträgen und Spenden.
+    </p>
 
-<!-- Sticky Navigation Bar -->
+    <p>
+        Je mehr Mittel durch Beiträge und Spenden zur Verfügung stehen, desto effektiver und flexibler kann die Oranienschule in ihrer Arbeit unterstützt werden.
+    </p>
 
-<nav class="sticky-nav">
-	<div class="nav-container">
-		<HeaderLink href="/Foerderkreis">Main</HeaderLink>
-		<HeaderLink href="/Foerderkreis/projekte">Projekte</HeaderLink>
-		<HeaderLink href="/Foerderkreis/spendeninformation">Spendeninformationen</HeaderLink>
-		<HeaderLink href="/Foerderkreis/danke">Danke</HeaderLink>
-	</div>
-</nav>
+    <p>
+        Werde ein Teil unserer engagierten Gemeinschaft und hilf mit, die Zukunft der Schüler:innen zu gestalten! 
+    </p>
 
+    <div style="text-align: center; margin: 2rem 0;">
+        <a href="/mitglied-werden" class="cta-button">MITGLIED WERDEN!</a>
+    </div>
 
-	<p>
-		Der Förderkreis der Oranienschule hat derzeit über 300 engagierte Mitglieder, vor allem aus der Elternschaft, aber auch Lehrer und Ehemalige unterstützen uns mit ihren Beiträgen und Spenden.
-	</p>
+    <h2>Mission</h2>
+    <p>
+        Der als gemeinnützig anerkannte Verein fördert als Teil der Schulgemeinschaft der Oranienschule die enge Zusammenarbeit zwischen Eltern, Schulleitung und Lehrkräften im Interesse aller Schüler:innen. Wir sehen unsere Aufgabe darin, der Oranienschule förderungswürdige Projekte vorzuschlagen oder von der Schule an uns herangetragene Ideen zu prüfen und zu unterstützen. In diesem Zusammenhang verwalten wir die Mitgliedsbeiträge und Spenden und stellen sicher, dass diese dem Vereinszweck entsprechend verwendet werden. Es ist unser erklärtes Ziel, solche Anschaffungen und Projekte zu unterstützen, die allen Schüler:innen der Oranienschule zugute kommen.
+    </p>
 
-	<p>
-		Je mehr Mittel durch Beiträge und Spenden zur Verfügung stehen, desto effektiver und flexibler kann die Oranienschule in ihrer Arbeit unterstützt werden.
-	</p>
+    <div style="text-align: center; margin: 2rem 0;">
+        <a href="/satzung_foerderverein_oranienschule.pdf" class="cta-button">Unsere Satzung (PDF)</a>
+    </div>
 
-	<p>
-		Werde ein Teil unserer engagierten Gemeinschaft und hilf mit, die Zukunft der Schüler:innen zu gestalten! 
-	</p>
+    <h2>Aufgaben</h2>
+    <ul>
+        <li>Förderung der Schüler:innen der Oranienschule</li>
+        <li>Oranienschule positiv und aktiv mitgestalten</li>
+        <li>Stetige Verbesserung des Lernumfeldes und der Lernmöglichkeiten</li>
+        <li>Ideelle und materielle Unterstützung der Schüler:innen</li>
+        <li>Erweiterung und Erneuerung der Schulausstattung</li>
+        <li>Sponsorensuche</li>
+    </ul>
 
-	<p>
-		Wir freuen uns über jede Unterstützung!
-	</p>
+    <div style="text-align: center; margin: 2rem 0;">
+        <a href="/freistellungsbescheid-foerderkreis-oranienschule-2022.pdf" class="cta-button">Gemeinnützigkeitsnachweis (PDF)</a>
+    </div>
 
-	
+    <h2>Der Vorstand</h2>
+    
+    <div class="board-members">
+        <div class="board-member">
+            <h3>1. Vorsitzender</h3>
+            <p>Martin Seibert</p>
+        </div>
+        
+        <div class="board-member">
+            <h3>2. Vorsitzender</h3>
+            <p>Bernd Münker</p>
+        </div>
+        
+        <div class="board-member">
+            <h3>Schatzmeister</h3>
+            <p>Carl-Axel Brandt</p>
+            <p class="member-description">
+                Hallo, ich bin Schatzmeister des Förderkreises. Ich habe zwei Kinder an der Oranienschule. Der Förderkreis kann sich an vielen Stellen im Schulgeschehen einbringen und die Situation für alle Schulbeteiligten verbessern. Das macht Spaß!
+            </p>
+        </div>
+        
+        <div class="board-member">
+            <h3>Schriftführer</h3>
+            <p>Prof. Dr. Dr. Alexander Moutchnik</p>
+        </div>
+        
+        <div class="board-member">
+            <h3>Beisitzer:innen</h3>
+            <ul>
+                <li>Miriam Becker</li>
+                <li>Sabrina Groke</li>
+                <li>Dennis Groke</li>
+                <li>Sebastian Krekeler</li>
+                <li>Bjoern Pust</li>
+                <li>Prof. Dr. med. Oliver C. Singer</li>
+                <li>Jochen Steinmetz</li>
+                <li>Tobias Tschöpe</li>
+                <li>Claudia Wenzel</li>
+            </ul>
+        </div>
+        
+        <div class="board-member">
+            <h3>Rechnungsprüfung</h3>
+            <ul>
+                <li>Britta Kalinowski</li>
+                <li>Manfred Reichel</li>
+            </ul>
+        </div>
+        
+        <div class="board-member">
+            <h3>Verbindungslehrer</h3>
+            <p>Frieder Gassert</p>
+        </div>
+    </div>
+
+    <p>
+        Wenn Du den Vorstand unterstützen oder mehr über die Arbeit des Vorstandes erfahren möchtest, freuen wir uns über Deine Nachricht. Gerne laden wir Dich auch als Gast zu einer Sitzung ein.
+    </p>
+
+    <div class="contact-section">
+        <h2>Anfragen oder Anregungen?</h2>
+        <p>Wir sind jederzeit über E-Mail erreichbar unter <a href="mailto:foerderkreis@oranienschule.de">foerderkreis@oranienschule.de</a></p>
+        
+        <div class="address">
+            <p><strong>Förderkreis der Oranienschule, Gymnasium der LH Wiesbaden e.V.</strong></p>
+            <p>vertreten durch Martin Seibert und Bernd Münker</p>
+            <p>Oranienstr. 5-7</p>
+            <p>65185 Wiesbaden</p>
+        </div>
+    </div>
 
 <style>
-	/* Sticky Navigation Styles */
-	.sticky-nav {
-		position: sticky;
-		top: 0;
-		background: white;
-		border-bottom: 1px solid #e5e7eb;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		z-index: 1000;
-		padding: 0.75rem 0;
-	}
+    /* Sticky Navigation Styles */
+    .sticky-nav {
+        position: sticky;
+        top: 0;
+        background: white;
+        border-bottom: 1px solid #e5e7eb;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 0.75rem 0;
+    }
 
-	.nav-container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 1rem;
-		display: flex;
-		justify-content: center;
-		gap: 2rem;
-	}
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
 
-	.nav-container a {
-		padding: 0.5rem 1rem;
-		color: #374151;
-		text-decoration: none;
-		font-weight: 500;
-		border-radius: 6px;
-		transition: all 0.2s ease;
-	}
+    .nav-container a {
+        padding: 0.5rem 1rem;
+        color: #374151;
+        text-decoration: none;
+        font-weight: 500;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+    }
 
-	.nav-container a:hover {
-		background: #f3f4f6;
-		color: #1f2937;
-	}
+    .nav-container a:hover {
+        background: #f3f4f6;
+        color: #1f2937;
+    }
 
-	.nav-container a.active {
-		background: #3b82f6;
-		color: white;
-	}
+    .nav-container a.active {
+        background: #3b82f6;
+        color: white;
+    }
 
-	@media (max-width: 768px) {
-		.nav-container {
-			flex-direction: column;
-			align-items: center;
-			gap: 0.5rem;
-		}
-		
-		.nav-container a {
-			width: 100%;
-			text-align: center;
-		}
-	}
+    @media (max-width: 768px) {
+        .nav-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-container a {
+            width: 100%;
+            text-align: center;
+        }
+    }
 
-	.projects-section {
-		margin-top: 3rem;
-		padding: 2rem 0;
-		border-top: 1px solid #e5e7eb;
-	}
+    .cta-button {
+        display: inline-block;
+        background: #3b82f6;
+        color: white;
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.2s ease;
+        margin: 0.5rem;
+    }
 
-	.projects-section h2 {
-		font-size: 2.5rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
-		color: #1f2937;
-		text-align: center;
-	}
+    .cta-button:hover {
+        background: #2563eb;
+    }
 
-	.projects-intro {
-		text-align: center;
-		font-size: 1.1rem;
-		color: #6b7280;
-		margin-bottom: 3rem;
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+    .board-members {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+    }
 
-	.projects-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-		gap: 2rem;
-		margin-bottom: 3rem;
-	}
+    .board-member {
+        background: #f8fafc;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid #3b82f6;
+    }
 
-	.project-card {
-		background: white;
-		border-radius: 12px;
-		overflow: hidden;
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-		transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-	}
+    .board-member h3 {
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
 
-	.project-card:hover {
-		transform: translateY(-4px);
-		box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-	}
+    .board-member p {
+        margin: 0.25rem 0;
+        color: #374151;
+    }
 
-	.project-image {
-		height: 200px;
-		overflow: hidden;
-	}
+    .member-description {
+        font-style: italic;
+        color: #6b7280;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+    }
 
-	.project-image img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		transition: transform 0.3s ease;
-	}
+    .board-member ul {
+        margin: 0.5rem 0;
+        padding-left: 1.5rem;
+    }
 
-	.project-card:hover .project-image img {
-		transform: scale(1.05);
-	}
+    .board-member li {
+        margin: 0.25rem 0;
+        color: #374151;
+    }
 
-	.project-content {
-		padding: 1.5rem;
-	}
+    .board-photo {
+        text-align: center;
+        margin: 2rem 0;
+        padding: 1rem;
+        background: #f8fafc;
+        border-radius: 8px;
+    }
 
-	.project-category {
-		display: inline-block;
-		background: #3b82f6;
-		color: white;
-		padding: 0.25rem 0.75rem;
-		border-radius: 20px;
-		font-size: 0.875rem;
-		font-weight: 500;
-		margin-bottom: 0.75rem;
-	}
+    .board-photo p {
+        margin: 0.25rem 0;
+        color: #6b7280;
+        font-size: 0.9rem;
+    }
 
-	.project-content h3 {
-		font-size: 1.5rem;
-		font-weight: bold;
-		margin-bottom: 0.75rem;
-		color: #1f2937;
-	}
+    .contact-section {
+        margin-top: 3rem;
+        padding: 2rem;
+        background: #f8fafc;
+        border-radius: 12px;
+        text-align: center;
+    }
 
-	.project-content p {
-		color: #6b7280;
-		line-height: 1.6;
-		margin-bottom: 1rem;
-	}
+    .contact-section h2 {
+        color: #1f2937;
+        margin-bottom: 1rem;
+    }
 
-	.project-stats {
-		display: flex;
-		justify-content: space-between;
-		font-size: 0.875rem;
-		color: #9ca3af;
-		border-top: 1px solid #f3f4f6;
-		padding-top: 0.75rem;
-	}
+    .contact-section a {
+        color: #3b82f6;
+        text-decoration: none;
+    }
 
-	.projects-cta {
-		text-align: center;
-		background: #f8fafc;
-		padding: 2rem;
-		border-radius: 12px;
-		margin-top: 2rem;
-	}
+    .contact-section a:hover {
+        text-decoration: underline;
+    }
 
-	.projects-cta p {
-		margin-bottom: 1.5rem;
-		color: #374151;
-		line-height: 1.6;
-	}
+    .address {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background: white;
+        border-radius: 8px;
+        display: inline-block;
+    }
 
-	.cta-button {
-		display: inline-block;
-		background: #3b82f6;
-		color: white;
-		padding: 0.75rem 2rem;
-		border-radius: 8px;
-		text-decoration: none;
-		font-weight: 600;
-		transition: background-color 0.2s ease;
-	}
+    .address p {
+        margin: 0.25rem 0;
+        color: #374151;
+    }
 
-	.cta-button:hover {
-		background: #2563eb;
-	}
-
-	@media (max-width: 768px) {
-		.projects-grid {
-			grid-template-columns: 1fr;
-		}
-		
-		.projects-section h2 {
-			font-size: 2rem;
-		}
-		
-		.project-stats {
-			flex-direction: column;
-			gap: 0.5rem;
-		}
-	}
+    @media (max-width: 768px) {
+        .board-members {
+            grid-template-columns: 1fr;
+        }
+        
+        .contact-section {
+            padding: 1rem;
+        }
+    }
 </style>

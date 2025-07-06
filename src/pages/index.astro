@@ -6,43 +6,323 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>Willkommen bei der Oranienschule </h1>
-			<p>
-				Die Oranienschule ist ein Gymnasium der Landeshauptstadt Wiesbaden in Deutschland. Sie hat eine lange Tradition und ist bekannt für ihre musikalischen und künstlerischen Schwerpunkte. Die Schule bietet ein breites Spektrum an Fächern und Arbeitsgemeinschaften an, die die Schülerinnen und Schüler in ihrer Persönlichkeitsentwicklung unterstützen.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<h1>Willkommen beim Förderkreis der Oranienschule Wiesbaden</h1>
+			
+			<section class="hero-section">
+				<p class="hero-text">
+					Seit 1999 setzen wir uns für die Förderung und Unterstützung der Oranienschule ein. 
+					Mit über 300 engagierten Mitgliedern aus der Elternschaft, dem Lehrerkollegium und 
+					von Ehemaligen schaffen wir gemeinsam eine bessere Lernumgebung für alle Schüler:innen.
+				</p>
+			</section>
+
+			<section class="overview-section">
+				<h2>Was wir tun</h2>
+				<div class="features-grid">
+					<div class="feature-card">
+						<h3>🎵 Musikalische Förderung</h3>
+						<p>
+							Wir unterstützen Musik- und Theaterprojekte, finanzieren Instrumente, 
+							Kostüme und Bühnenausstattung. Die Oranienschule ist bekannt für ihre 
+							musikalischen und künstlerischen Schwerpunkte.
+						</p>
+					</div>
+					
+					<div class="feature-card">
+						<h3>🌱 Umweltbildung</h3>
+						<p>
+							Unser Schulgarten-Projekt fördert das Umweltbewusstsein und lehrt 
+							praktisch über Nachhaltigkeit und verantwortungsvollen Umgang mit 
+							natürlichen Ressourcen.
+						</p>
+					</div>
+					
+					<div class="feature-card">
+						<h3>💻 Digitale Bildung</h3>
+						<p>
+							Wir finanzieren moderne Lernplattformen, Tablets, interaktive Whiteboards 
+							und digitale Bibliotheken für eine zeitgemäße Bildung.
+						</p>
+					</div>
+					
+					<div class="feature-card">
+						<h3>🏃‍♂️ Sport & Bewegung</h3>
+						<p>
+							Neue Sportgeräte, Turnausstattung und Fitness-Equipment verbessern 
+							die Bewegungsmöglichkeiten und fördern die Gesundheit der Schüler:innen.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="projects-preview">
+				<h2>Aktuelle Projekte</h2>
+				<p>
+					Derzeit unterstützen wir mehrere laufende Projekte mit einem Gesamtvolumen 
+					von über €35.000. Von der digitalen Bibliothek bis zum Schulgarten - 
+					jedes Projekt trägt zur Verbesserung der Bildungsqualität bei.
+				</p>
+				<div class="cta-buttons">
+					<a href="/projekte" class="btn btn-primary">Alle Projekte ansehen</a>
+					<a href="/foerderkreis" class="btn btn-secondary">Über uns erfahren</a>
+				</div>
+			</section>
+
+			<section class="support-section">
+				<h2>Unterstützen Sie uns</h2>
+				<p>
+					Ihre Spende oder Mitgliedschaft hilft uns dabei, auch in Zukunft innovative 
+					Projekte zu realisieren. Jeder Beitrag zählt und kommt direkt den Schüler:innen zugute.
+				</p>
+				<div class="support-options">
+					<div class="support-option">
+						<h3>💳 Spenden</h3>
+						<p>Unterstützen Sie uns mit einer einmaligen oder regelmäßigen Spende.</p>
+						<a href="/spendeninformation" class="btn btn-outline">Spendeninformationen</a>
+					</div>
+					<div class="support-option">
+						<h3>👥 Mitgliedschaft</h3>
+						<p>Werden Sie Teil unserer Gemeinschaft und gestalten Sie die Zukunft mit.</p>
+						<a href="/foerderkreis" class="btn btn-outline">Mitglied werden</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="news-section">
+				<h2>Aktuelle News</h2>
+				<p>
+					Bleiben Sie auf dem Laufenden über unsere Projekte, Veranstaltungen und 
+					Entwicklungen an der Oranienschule.
+				</p>
+				<a href="/blog" class="btn btn-secondary">News lesen</a>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+
+	h1 {
+		font-size: 2.5rem;
+		font-weight: bold;
+		color: #1f2937;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 0.75rem;
+	}
+
+	.hero-section {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		padding: 3rem 2rem;
+		border-radius: 12px;
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+
+	.hero-text {
+		font-size: 1.25rem;
+		line-height: 1.6;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.overview-section {
+		margin-bottom: 4rem;
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.feature-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+		transition: transform 0.2s ease-in-out;
+	}
+
+	.feature-card:hover {
+		transform: translateY(-4px);
+	}
+
+	.feature-card p {
+		color: #6b7280;
+		line-height: 1.6;
+	}
+
+	.projects-preview {
+		background: #f8fafc;
+		padding: 3rem 2rem;
+		border-radius: 12px;
+		margin-bottom: 4rem;
+		text-align: center;
+	}
+
+	.projects-preview p {
+		font-size: 1.1rem;
+		color: #374151;
+		max-width: 600px;
+		margin: 0 auto 2rem auto;
+		line-height: 1.6;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.support-section {
+		margin-bottom: 4rem;
+	}
+
+	.support-section p {
+		text-align: center;
+		font-size: 1.1rem;
+		color: #374151;
+		max-width: 600px;
+		margin: 0 auto 2rem auto;
+		line-height: 1.6;
+	}
+
+	.support-options {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.support-option {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	.support-option p {
+		color: #6b7280;
+		margin-bottom: 1.5rem;
+		line-height: 1.6;
+	}
+
+	.news-section {
+		background: #f8fafc;
+		padding: 3rem 2rem;
+		border-radius: 12px;
+		text-align: center;
+	}
+
+	.news-section p {
+		font-size: 1.1rem;
+		color: #374151;
+		max-width: 600px;
+		margin: 0 auto 2rem auto;
+		line-height: 1.6;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 500;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.btn-primary {
+		background: #3b82f6;
+		color: white;
+	}
+
+	.btn-primary:hover {
+		background: #2563eb;
+		transform: translateY(-2px);
+	}
+
+	.btn-secondary {
+		background: #6b7280;
+		color: white;
+	}
+
+	.btn-secondary:hover {
+		background: #4b5563;
+		transform: translateY(-2px);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: #3b82f6;
+		border: 2px solid #3b82f6;
+	}
+
+	.btn-outline:hover {
+		background: #3b82f6;
+		color: white;
+		transform: translateY(-2px);
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 2rem;
+		}
+
+		h2 {
+			font-size: 1.75rem;
+		}
+
+		.hero-section {
+			padding: 2rem 1rem;
+		}
+
+		.hero-text {
+			font-size: 1.1rem;
+		}
+
+		.features-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.support-options {
+			grid-template-columns: 1fr;
+		}
+
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>
